@@ -1,0 +1,235 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open Sans&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <style type="text/css">
+        #top{
+            border-bottom: 1px solid whitesmoke;
+            height:100px;
+            padding-left:50px;
+            padding-top:30px;
+            display:flex;
+        }
+        #top input{
+            height:45px;
+            background-color: #eee;
+            border-radius: 20px;
+            border: none;
+            padding-left: 20px;
+            width:800px;
+            margin-right: 20px;
+            font-family: 'Roboto'
+        }
+        #top img{
+            height:55px;
+            margin-right:20px;
+        }
+        #writeup{
+            font-size:14px;
+            color: #777;
+            margin-top: 15px;
+            font-family: 'Roboto';
+            text-decoration: underline;
+        }
+
+        #main{
+            padding-left:230px;
+            padding-right:230px;
+            color: #666;
+            font-size:15px;
+            font-family: 'Roboto'
+        }
+
+        #main a{
+            font-size: 20px;
+            text-decoration: none;
+            font-family: 'Roboto';
+            line-height:1.35em
+        }
+        
+        #link{
+            font-size: 14px;
+            line-height: 1.35em;
+            color:black
+        }
+
+        #ranking{
+            color: #ba993f
+        }
+
+        .overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+            height: 100%;
+            width: 0%;
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0,0,0); /* Black fallback color */
+            background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+          }
+          
+          /* Position the content inside the overlay */
+          .overlay-content {
+            position: relative;
+            top: 5%; /* 25% from the top */
+            width: 100%; /* 100% width */
+            text-align: center; /* Centered text/links */
+            color:white;
+            font-size:30px;
+            font-family: 'Open Sans';
+            margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+          }
+          
+          /* The navigation links inside the overlay */
+          .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block; /* Display block instead of inline */
+            transition: 0.3s; /* Transition effects on hover (color) */
+          }
+          
+          /* When you mouse over the navigation links, change their color */
+          .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+          }
+    </style>
+    <div id="top"><img src="google.png"> <input value="Harvard College" ><a style="cursor:pointer" id="writeup" onclick="open()">Project write-up</a>
+    </div><br>
+    <div id="main">
+        
+        <span id="link">https://college.harvard.edu/</span><br><a href=https://college.harvard.edu/>Harvard College</a> <span id="ranking">0.3974</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College),   <b>#4</b> (Current Students | Harvard),   <b>#13</b> (Financial Aid),   <b>#19</b> (Apply For Financial Aid),   <b>#2</b> (College Offices),   <b>#14</b> (Office of Undergraduate Education),   <b>#11</b> (Harvard University),   <b>#5</b> (Advising),   <b>#6</b> (Guide to Student Employment),   <b>#7</b> (A Guide to Finding Funding),   <b>#16</b> (Research),   <b>#3</b> (Events Calendar),   <b>#8</b> (Study Abroad),   <b>#12</b> (Academics),   <b>#20</b> (Liberal Arts and Sciences),   <b>#9</b> (Student Stories),   <b>#10</b> (Cambridge &amp; Boston),   <b>#17</b> (Life at Harvard),   <b>#21</b> (Residential Life),   <b>#18</b> (About | Harvard College) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/about/college-offices</span><br><a href=https://college.harvard.edu/about/college-offices>College Offices</a> <span id="ranking">0.0596</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College),   <b>#5</b> (Advising) 
+        <br><br>
+        
+        <span id="link">https://calendar.college.harvard.edu/</span><br><a href=https://calendar.college.harvard.edu/>Events Calendar</a> <span id="ranking">0.0447</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College),   <b>#14</b> (Office of Undergraduate Education) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/financial-aid/apply-financial-aid/current-students</span><br><a href=https://college.harvard.edu/financial-aid/apply-financial-aid/current-students>Current Students | Harvard</a> <span id="ranking">0.0397</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/academics/advising</span><br><a href=https://college.harvard.edu/academics/advising>Advising</a> <span id="ranking">0.0397</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/guides/student-employment</span><br><a href=https://college.harvard.edu/guides/student-employment>Guide to Student Employment</a> <span id="ranking">0.0397</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/resources/guide-finding-funding</span><br><a href=https://college.harvard.edu/resources/guide-finding-funding>A Guide to Finding Funding</a> <span id="ranking">0.0397</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/academics/liberal-arts-sciences/study-abroad</span><br><a href=https://college.harvard.edu/academics/liberal-arts-sciences/study-abroad>Study Abroad</a> <span id="ranking">0.0397</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/life-at-harvard/student-stories</span><br><a href=https://college.harvard.edu/life-at-harvard/student-stories>Student Stories</a> <span id="ranking">0.0397</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/life-at-harvard/residential-life/cambridge-boston</span><br><a href=https://college.harvard.edu/life-at-harvard/residential-life/cambridge-boston>Cambridge &amp; Boston</a> <span id="ranking">0.0397</span> <br> Pages linking here: 
+         <b>#1</b> (Harvard College) 
+        <br><br>
+        
+        <span id="link">https://www.harvard.edu/</span><br><a href=https://www.harvard.edu/>Harvard University</a> <span id="ranking">0.0298</span> <br> Pages linking here: 
+         <b>#14</b> (Office of Undergraduate Education),   <b>#22</b> (Harvard College Student Handbook),   <b>#15</b> (Student Employment Office) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/academics</span><br><a href=https://college.harvard.edu/academics>Academics</a> <span id="ranking">0.0265</span> <br> Pages linking here: 
+         <b>#8</b> (Study Abroad),   <b>#12</b> (Academics) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/financial-aid</span><br><a href=https://college.harvard.edu/financial-aid>Financial Aid</a> <span id="ranking">0.0199</span> <br> Pages linking here: 
+         <b>#4</b> (Current Students | Harvard),   <b>#19</b> (Apply For Financial Aid) 
+        <br><br>
+        
+        <span id="link">https://oue.fas.harvard.edu/</span><br><a href=https://oue.fas.harvard.edu/>Office of Undergraduate Education</a> <span id="ranking">0.0199</span> <br> Pages linking here: 
+         <b>#2</b> (College Offices) 
+        <br><br>
+        
+        <span id="link">https://seo.harvard.edu/</span><br><a href=https://seo.harvard.edu/>Student Employment Office</a> <span id="ranking">0.0199</span> <br> Pages linking here: 
+         <b>#6</b> (Guide to Student Employment) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/academics/research</span><br><a href=https://college.harvard.edu/academics/research>Research</a> <span id="ranking">0.0199</span> <br> Pages linking here: 
+         <b>#7</b> (A Guide to Finding Funding) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/life-at-harvard</span><br><a href=https://college.harvard.edu/life-at-harvard>Life at Harvard</a> <span id="ranking">0.0199</span> <br> Pages linking here: 
+         <b>#10</b> (Cambridge &amp; Boston),   <b>#21</b> (Residential Life) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/about</span><br><a href=https://college.harvard.edu/about>About | Harvard College</a> <span id="ranking">0.0199</span> <br> Pages linking here: 
+         <b>#2</b> (College Offices) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/financial-aid/apply-financial-aid</span><br><a href=https://college.harvard.edu/financial-aid/apply-financial-aid>Apply For Financial Aid</a> <span id="ranking">0.0132</span> <br> Pages linking here: 
+         <b>#4</b> (Current Students | Harvard) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/academics/liberal-arts-sciences</span><br><a href=https://college.harvard.edu/academics/liberal-arts-sciences>Liberal Arts and Sciences</a> <span id="ranking">0.0132</span> <br> Pages linking here: 
+         <b>#8</b> (Study Abroad) 
+        <br><br>
+        
+        <span id="link">https://college.harvard.edu/life-at-harvard/residential-life</span><br><a href=https://college.harvard.edu/life-at-harvard/residential-life>Residential Life</a> <span id="ranking">0.0132</span> <br> Pages linking here: 
+         <b>#10</b> (Cambridge &amp; Boston) 
+        <br><br>
+        
+        <span id="link">https://handbook.college.harvard.edu/</span><br><a href=https://handbook.college.harvard.edu/>Harvard College Student Handbook</a> <span id="ranking">0.005</span> <br> Pages linking here: 
+         <b>#14</b> (Office of Undergraduate Education) 
+        <br><br>
+        
+    </div>
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <button id="close">X</button><br><br>
+      <embed style="width:90%;height:800px;" src="The Page Rank Algorithm (2).pdf#view=FitH">
+    </div>
+  
+  </div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        
+        document.getElementById("close").onclick = function(){
+            console.log(3)
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        document.getElementById("writeup").onclick = function(){
+            console.log(3)
+            document.getElementById("myNav").style.width = "100%";
+        }
+    }
+</script>
+</body>
+</html>
